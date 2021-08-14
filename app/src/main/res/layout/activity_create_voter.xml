@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".CreateVoterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/lblNewVoterPageTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="16dp"
+            android:text="Creating New Voter"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/main"
+            android:textAlignment="center" />
+
+        <LinearLayout
+            android:id="@+id/voterNameContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblNewVoterPageTitle"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/lblVoterName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Name"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="@color/main" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/txtVoterName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                tools:text="yahyasaadi"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/voterDescriptionContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/voterNameContainer"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/lblVoterDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="A Brief Description [Max 75 Letters]"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="@color/main" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/txtVoterDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:maxLength="75"
+                tools:text="description"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:gravity="top"
+                android:backgroundTint="@color/black" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/voterGenderContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/voterDescriptionContainer"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdbMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:text="Male"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/main"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/rdbFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Female"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/main" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/voterDOBContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/voterGenderContainer"
+            android:layout_marginTop="16dp"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/lblVoterDOB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Year Of Birth"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="@color/main" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/txtDOB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:entries="@array/years"
+                android:spinnerMode="dialog"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/voterCountryContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/voterDOBContainer"
+            android:layout_marginTop="16dp"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/lblVoterCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Country"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="@color/main" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/txtCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:entries="@array/countries"
+                android:spinnerMode="dialog"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/voterFacultyContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/voterCountryContainer"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/lblVoterFaculty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Faculty"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="@color/main" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/txtVoterFaculty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:entries="@array/faculties"
+                android:spinnerMode="dialog"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/voterDepartmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/voterFacultyContainer"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/lblVoterDepartment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Department"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="@color/main" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/txtDepartment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:entries="@array/com_department"
+                android:spinnerMode="dialog"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/voterUsernameContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/voterDepartmentContainer"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/lblVoterUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Username"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="@color/main" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/txtVoterUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                tools:text="yahyasaadi"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/voterPasswordContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/voterUsernameContainer"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/lblVoterPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Password"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="@color/main" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/txtVoterPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                tools:text="yahyasaadi"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/black" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnCreateVoter"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/voterPasswordContainer"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="24dp"
+            android:background="@drawable/button_background"
+            android:src="@drawable/newone" />
+
+    </RelativeLayout>
+
+</ScrollView>

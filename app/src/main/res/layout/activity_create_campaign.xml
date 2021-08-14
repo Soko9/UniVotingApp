@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:nestedScrollingEnabled="true"
+    tools:context=".CreateCampaignActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lblNewCampPageTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="16dp"
+            android:text="Creating New Campaign"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/main"
+            android:textAlignment="center" />
+
+        <LinearLayout
+            android:id="@+id/campNameContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblNewCampPageTitle"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/lblCampName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Name"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="@color/main" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/txtCampName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                tools:text="yahyasaadi"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/campDescriptionContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/campNameContainer"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/lblCampDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="A Brief Description [Max 120 Letters]"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="@color/main" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/txtCampDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:maxLength="120"
+                tools:text="description"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:gravity="top"
+                android:backgroundTint="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/campTimeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/campDescriptionContainer"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/lblCampTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Campaign Deadline"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="@color/main" />
+
+            <DatePicker
+                android:id="@+id/txtCampTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:datePickerMode="calendar"
+                android:theme="@style/Theme.VotingApp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/campCandidatesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/campTimeContainer"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/lblCampCandidates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Campaign Candidates"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="@color/main" />
+
+            <ListView
+                android:id="@+id/lblCandidates"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/list_background"
+                android:choiceMode="multipleChoice"
+                android:foregroundTint="@color/main"
+                android:nestedScrollingEnabled="true"
+                android:padding="12dp"
+                android:scrollbarStyle="insideOverlay"
+                android:scrollbars="vertical"
+                android:smoothScrollbar="true"
+                android:textColor="@color/main"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:theme="@style/Theme.VotingApp" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnDone"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@color/main"
+                android:src="@drawable/ic_done"
+                android:layout_gravity="end"
+                android:layout_marginEnd="24dp" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnCreateCamp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/campCandidatesContainer"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="24dp"
+            android:background="@drawable/button_background"
+            android:src="@drawable/campaign" />
+
+    </RelativeLayout>
+
+</ScrollView>

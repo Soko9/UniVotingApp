@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".CreateAdminActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/lblNewAdminPageTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="16dp"
+            android:text="Creating New Admin"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/main"
+            android:textAlignment="center" />
+
+        <LinearLayout
+            android:id="@+id/adminNameContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblNewAdminPageTitle"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/lblAdminName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Name"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="@color/main" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/txtAdminName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                tools:text="yahyasaadi"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/adminFacultyContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminNameContainer"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/lblAdminFaculty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Faculty"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="@color/main" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/txtAdminFaculty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:entries="@array/faculties"
+                android:spinnerMode="dialog"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/adminUsernameContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminFacultyContainer"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/lblAdminUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Username"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="@color/main" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/txtAdminUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                tools:text="yahyasaadi"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/adminPasswordContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminUsernameContainer"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/lblAdminPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Password"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="@color/main" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/txtAdminPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                tools:text="yahyasaadi"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/adminCodeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPasswordContainer"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/lblAdminCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Faculty Code"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="@color/main" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/txtAdminCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                tools:text="yahyasaadi"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/black" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnCreateAdmin"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/adminCodeContainer"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="24dp"
+            android:background="@drawable/button_background"
+            android:src="@drawable/newone"/>
+
+    </RelativeLayout>
+
+</ScrollView>
