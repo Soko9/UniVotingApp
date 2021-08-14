@@ -1,2 +1,2 @@
 # UniVotingApp
- This is the project for my university internship
+ An Online Voting Android Application Project For Internship at Uskudar University.
